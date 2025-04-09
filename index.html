@@ -6,11 +6,20 @@
   <title>International Conference on Next-Generation Engineering Integration</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Add favicon -->
+  <link rel="icon" type="image/png" href="public/images/logo.png">
+  <!-- Add Open Graph meta tags for better social sharing -->
+  <meta property="og:title" content="International Conference on Next-Generation Engineering Integration">
+  <meta property="og:description" content="Join us for the International Conference on Next-Generation Engineering Integration at BGSBU, September 20-21, 2025">
+  <meta property="og:image" content="public/images/campus.jpeg">
+  <meta property="og:url" content="https://bgsbu.ac.in">
+  <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
   <!-- Add a preloader -->
   <div id="preloader" class="preloader">
     <div class="loader">
+      <img src="logo.png" alt="BGSBU Logo" class="preloader-logo">
       <svg width="100" height="100" viewBox="0 0 100 100">
         <circle cx="50" cy="50" r="40" stroke="rgba(79, 70, 229, 0.2)" stroke-width="8" fill="none" />
         <circle cx="50" cy="50" r="40" stroke="var(--primary)" stroke-width="8" fill="none" stroke-dasharray="251.2" stroke-dashoffset="251.2" class="animate-circle" />
@@ -27,8 +36,11 @@
   <div class="side-nav">
     <div class="side-nav-header">
       <div class="logo">
-        <span class="logo-text">BGSBU</span>
-        <span class="logo-badge">Conference 2025</span>
+        <img src="logo.png" alt="BGSBU Logo" class="logo-img">
+        <div class="logo-text-container">
+          <span class="logo-text">BGSBU</span>
+          <span class="logo-badge">Conference 2025</span>
+        </div>
       </div>
       <button class="side-nav-close">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
@@ -63,7 +75,7 @@
     <section id="home" class="hero-section">
       <div class="hero-background">
         <div class="hero-gradient"></div>
-        <div class="hero-image"></div>
+        <div class="hero-image" style="background-image: url('public/images/campus.jpeg');"></div>
         <div class="hero-overlay"></div>
         
         <!-- Decorative elements -->
@@ -75,7 +87,10 @@
       <div class="container">
         <div class="hero-content">
           <div class="hero-text">
-            <div class="badge">International Conference</div>
+            <div class="university-logo-container">
+              <img src="logo.png" alt="BGSBU Logo" class="university-logo">
+              <div class="badge">International Conference</div>
+            </div>
             <h1 class="hero-title">
               <span class="hero-title-line">Next-Generation</span>
               <span class="hero-title-line gradient-text">Engineering Integration</span>
@@ -105,7 +120,7 @@
           <div class="hero-image-container">
             <div class="hero-card">
               <div class="hero-card-image">
-                <img src="bgsbu.jpg" alt="Conference">
+                <img src="bgsbu.jpg" alt="BGSBU Campus">
                 <div class="hero-card-overlay"></div>
                 <div class="hero-card-content">
                   <h3>Engineering the Future</h3>
@@ -252,7 +267,7 @@
                 </div>
               </div>
               
-              <div class="card">
+              <div class="card about-rajouri-card">
                 <div class="card-blur-bg circle-left-bottom"></div>
                 
                 <h2 class="section-title">About Rajouri</h2>
@@ -676,6 +691,9 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
+          <div class="footer-logo">
+            <img src="logo.png" alt="BGSBU Logo" class="footer-logo-img">
+          </div>
           <h3 class="gradient-text">About BGSBU</h3>
           <p>
             Baba Ghulam Shah Badshah University is a state university located in Rajouri, Jammu and Kashmir, India.
@@ -726,7 +744,34 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
   </button>
 
+  <!-- Add a chat widget -->
+  <div class="chat-widget">
+    <button class="chat-widget-button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    </button>
+    <div class="chat-widget-panel">
+      <div class="chat-widget-header">
+        <h3>Conference Support</h3>
+        <button class="chat-widget-close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+        </button>
+      </div>
+      <div class="chat-widget-body">
+        <div class="chat-message bot">
+          <div class="chat-message-content">
+            <p>Hello! How can I help you with the conference?</p>
+          </div>
+        </div>
+      </div>
+      <div class="chat-widget-footer">
+        <input type="text" placeholder="Type your question here..." class="chat-widget-input">
+        <button class="chat-widget-send">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <script src="scripts.js"></script>
 </body>
 </html>
-
