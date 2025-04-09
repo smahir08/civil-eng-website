@@ -65,6 +65,13 @@
    align-items: center;
  }
  
+ .preloader-logo {
+   width: 100px;
+   height: auto;
+   margin-bottom: 20px;
+   animation: pulse 2s infinite;
+ }
+ 
  .animate-circle {
    animation: circle-animation 2s ease-in-out infinite;
    transform-origin: center;
@@ -313,7 +320,8 @@
    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
    position: relative;
    overflow: hidden;
-   height: 100%;
+   /* height: 100%; */
+
  }
  
  .card:hover {
@@ -424,6 +432,33 @@
    justify-content: space-between;
    align-items: center;
    margin-bottom: 2rem;
+ }
+ 
+ .logo {
+   display: flex;
+   align-items: center;
+   gap: 0.75rem;
+ }
+ 
+ .logo-img {
+   width: 40px;
+   height: auto;
+ }
+ 
+ .logo-text-container {
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .logo-text {
+   font-weight: 700;
+   font-size: 1.25rem;
+   color: var(--foreground);
+ }
+ 
+ .logo-badge {
+   font-size: 0.75rem;
+   color: var(--foreground-tertiary);
  }
  
  .side-nav-close {
@@ -545,7 +580,6 @@
  .hero-image {
    position: absolute;
    inset: 0;
-   background-image: url("bgsbu.jpg");
    background-size: cover;
    background-position: center;
    opacity: 0.2;
@@ -601,6 +635,18 @@
    display: flex;
    flex-direction: column;
    gap: 1.5rem;
+ }
+ 
+ .university-logo-container {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+ }
+ 
+ .university-logo {
+   width: 80px;
+   height: auto;
+   animation: pulse 3s infinite;
  }
  
  .hero-title {
@@ -845,7 +891,9 @@
    grid-template-columns: 1fr;
    gap: 2rem;
  }
- 
+ .card about-rajouri-card{
+   height: 20px;
+ }
  .info-item {
    display: flex;
    align-items: flex-start;
@@ -877,9 +925,19 @@
    color: var(--foreground-tertiary);
  }
  
+ /* .conference-details{
+   gap: 6rem;
+ } */
+ /* Fix for About Rajouri card */
+ .about-rajouri-card {
+   height: auto;
+   min-height: 0;
+ }
+ 
  /* Speakers Section */
  .speakers-section {
    padding: 4rem 0;
+   margin-top: 2rem; /* Add margin to fix overlap */
  }
  
  .section-header {
@@ -1332,9 +1390,27 @@
    margin-bottom: 2rem;
  }
  
+ .footer-section {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+ }
+ 
+ .footer-logo {
+   display: flex;
+   align-items: center;
+   margin-bottom: 1rem;
+ }
+ 
+ .footer-logo-img {
+   width: 60px;
+   height: auto;
+   margin-right: 1rem;
+ }
+ 
  .footer-section h3 {
    font-size: 1.25rem;
-   margin-bottom: 1.5rem;
+   margin-bottom: 1rem;
  }
  
  .footer-section p {
@@ -1382,7 +1458,178 @@
    font-size: 0.875rem;
  }
  
- /* Media Queries */
+ /* Chat Widget */
+ .chat-widget {
+   position: fixed;
+   bottom: 30px;
+   right: 100px;
+   z-index: 999;
+ }
+ 
+ .chat-widget-button {
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   background: linear-gradient(45deg, var(--primary), var(--purple));
+   color: white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   border: none;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+   transition: all 0.3s ease;
+ }
+ 
+ .chat-widget-button:hover {
+   transform: scale(1.1);
+ }
+ 
+ .chat-widget-panel {
+   position: absolute;
+   bottom: 70px;
+   right: 0;
+   width: 350px;
+   height: 450px;
+   background: var(--background);
+   border-radius: var(--radius-lg);
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   transform: scale(0);
+   transform-origin: bottom right;
+   transition: transform 0.3s ease;
+ }
+ 
+ .chat-widget-panel.active {
+   transform: scale(1);
+ }
+ 
+ .chat-widget-header {
+   padding: 1rem;
+   background: linear-gradient(to right, var(--primary), var(--purple));
+   color: white;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ 
+ .chat-widget-header h3 {
+   font-size: 1rem;
+   margin: 0;
+ }
+ 
+ .chat-widget-close {
+   background: transparent;
+   border: none;
+   color: white;
+   cursor: pointer;
+ }
+ 
+ .chat-widget-body {
+   flex: 1;
+   padding: 1rem;
+   overflow-y: auto;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+ }
+ 
+ .chat-message {
+   display: flex;
+   flex-direction: column;
+   max-width: 80%;
+ }
+ 
+ .chat-message.bot {
+   align-self: flex-start;
+ }
+ 
+ .chat-message.user {
+   align-self: flex-end;
+ }
+ 
+ .chat-message-content {
+   padding: 0.75rem 1rem;
+   border-radius: var(--radius);
+   background: var(--card-bg);
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .chat-message.bot .chat-message-content {
+   border-bottom-left-radius: 0;
+   background: var(--primary-light);
+ }
+ 
+ .chat-message.user .chat-message-content {
+   border-bottom-right-radius: 0;
+   background: var(--purple-light);
+ }
+ 
+ .chat-widget-footer {
+   padding: 1rem;
+   display: flex;
+   gap: 0.5rem;
+   border-top: 1px solid rgba(255, 255, 255, 0.1);
+ }
+ 
+ .chat-widget-input {
+   flex: 1;
+   padding: 0.75rem 1rem;
+   border-radius: var(--radius);
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   background: var(--card-bg);
+   color: var(--foreground);
+ }
+ 
+ .chat-widget-send {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   background: linear-gradient(45deg, var(--primary), var(--purple));
+   color: white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   border: none;
+ }
+ 
+ /* Back to top button */
+ .back-to-top {
+   position: fixed;
+   bottom: 30px;
+   right: 30px;
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   background: linear-gradient(45deg, var(--primary), var(--purple));
+   color: white;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.3s ease;
+   z-index: 999;
+   border: none;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .back-to-top.visible {
+   opacity: 1;
+   visibility: visible;
+ }
+ 
+ .back-to-top:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+ }
+ 
+ /* Media Queries for Responsive Design */
  @media (min-width: 640px) {
    .hero-title {
      font-size: 3.5rem;
@@ -1468,6 +1715,40 @@
    }
  }
  
+ /* Mobile-specific styles */
+ @media (max-width: 639px) {
+   .side-nav {
+     width: 280px;
+   }
+ 
+   .hero-buttons {
+     flex-direction: column;
+     width: 100%;
+   }
+ 
+   .hero-buttons .btn {
+     width: 100%;
+   }
+ 
+   .countdown-timer {
+     grid-template-columns: repeat(2, 1fr);
+     gap: 1.5rem;
+   }
+ 
+   .about-rajouri-card {
+     margin-top: 1rem;
+   }
+ 
+   .chat-widget {
+     right: 20px;
+   }
+ 
+   .chat-widget-panel {
+     width: 300px;
+     right: -10px;
+   }
+ }
+ 
  /* Add these new animations and effects */
  
  /* Floating animation */
@@ -1522,12 +1803,6 @@
    }
  }
  
- /* Apply floating animation to cards */
- 
- /* Enhanced hero section */
- 
- /* Enhanced buttons */
- 
  /* Enhanced countdown timer */
  .countdown-item:nth-child(1) {
    animation-delay: 0s;
@@ -1546,7 +1821,6 @@
  }
  
  /* Enhanced theme cards */
- 
  @keyframes shine {
    0% {
      left: -50%;
@@ -1561,14 +1835,6 @@
    }
  }
  
- /* Enhanced side navigation */
- 
- /* Enhanced section headers */
- 
- /* Enhanced speaker cards */
- 
- /* Enhanced footer */
- 
  /* Add these fade-in animations */
  .fade-in {
    opacity: 0;
@@ -1580,8 +1846,6 @@
    opacity: 1;
    transform: translateY(0);
  }
- 
- /* Enhanced glassmorphism effect */
  
  /* Add a cool scrollbar */
  ::-webkit-scrollbar {
@@ -1640,37 +1904,4 @@
    border-radius: 50%;
    animation: loading 1s linear infinite;
  }
- 
- /* Back to top button */
- .back-to-top {
-   position: fixed;
-   bottom: 30px;
-   right: 30px;
-   width: 50px;
-   height: 50px;
-   border-radius: 50%;
-   background: linear-gradient(45deg, var(--primary), var(--purple));
-   color: white;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   cursor: pointer;
-   opacity: 0;
-   visibility: hidden;
-   transition: all 0.3s ease;
-   z-index: 999;
-   border: none;
-   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
- }
- 
- .back-to-top.visible {
-   opacity: 1;
-   visibility: visible;
- }
- 
- .back-to-top:hover {
-   transform: translateY(-5px);
-   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
- }
- 
  
