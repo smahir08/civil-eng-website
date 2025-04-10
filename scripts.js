@@ -1,4 +1,4 @@
-// Theme data
+// Update the themes array with the correct themes
 const themes = [
    {
      id: "ai-digital",
@@ -21,10 +21,10 @@ const themes = [
        "Implementing circular economy principles in construction to reduce waste and improve resource efficiency.",
    },
    {
-     id: "education",
-     title: "Engineering Education and Industry Mitigation",
-     icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>',
-     description: "Bridging the gap between engineering education and industry needs for future professionals.",
+     id: "climate-resilience",
+     title: "Climate Resilience and Disaster Mitigation",
+     icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 19h8a4 4 0 0 0 3.8-2.8 4 4 0 0 0-1.6-4.5c1-1.1 1-2.7 0-3.8-1.1-1.1-2.7-1.1-3.8 0-.5.5-1.2.8-2.4.8V4.5C12 3.1 10.9 2 9.5 2S7 3.1 7 4.5v4.2c-1.2 0-1.9-.3-2.4-.8-1.1-1.1-2.7-1.1-3.8 0-1 1.1-1 2.7 0 3.8a4 4 0 0 0-1.6 4.5A4 4 0 0 0 8 19z"></path></svg>',
+     description: "Building resilient infrastructure to withstand climate change impacts and natural disasters.",
    },
    {
      id: "risk-assessment",
@@ -41,7 +41,7 @@ const themes = [
    },
    {
      id: "resilience",
-     title: "Resilience and Resilient Transport Networks",
+     title: "Sustainable and Resilient Transport Networks",
      icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"></path></svg>',
      description:
        "Building resilient infrastructure and transportation networks to withstand natural disasters and climate change.",
@@ -73,16 +73,16 @@ const themes = [
    },
    {
      id: "renewable",
-     title: "Integration of Renewable Energy Sources in Development",
+     title: "Integration of Renewable Energy Sources in Urban Development",
      icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"></path></svg>',
-     description: "Incorporating renewable energy sources in infrastructure development for sustainable solutions.",
+     description: "Incorporating renewable energy sources in urban development for sustainable solutions.",
    },
    {
      id: "gis",
-     title: "GIS and Remote Sensing for Urban Planning and Transportation Modeling",
+     title: "GIS and Remote Sensing for Urban Planning and Environmental Monitoring",
      icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>',
      description:
-       "Utilizing GIS and remote sensing technologies for effective urban planning and transportation modeling.",
+       "Utilizing GIS and remote sensing technologies for effective urban planning and environmental monitoring.",
    },
    {
      id: "ai-design",
@@ -99,33 +99,60 @@ const themes = [
    },
  ]
  
- // Committee members data
+ // Update committee members data
  const committeeMembers = {
-   organizing: [
-     { name: "Prof. Parvez Alum", role: "BGSB University, J & K, India", isChair: true },
-     { name: "Dr. Ahmed Riyaz", role: "BGSB University, J & K, India" },
-     { name: "Prof. Asif Hussain", role: "JMI, New Delhi, India" },
-     { name: "Dr. Majid B. Malik", role: "MCA" },
-     { name: "Dr. Tarun Kant", role: "ITE" },
-     { name: "Dr. Salma Aslam", role: "Biotechnology" },
-     { name: "Dr. Ahmed Riyaz", role: "EE" },
-     { name: "Dr. Nasir Rashid", role: "BGSBU, India" },
-     { name: "Mr. Ameen Uddin Qadri", role: "BGSBU, India" },
-     { name: "Dr. Shoaib Ahmed", role: "Biotechnology" },
-     { name: "Dr. Gulam Ahmed", role: "MCA" },
-     { name: "Dr. Naseem Ahmed", role: "MCA" },
-     { name: "Dr. Amir Nadeem", role: "JMI" },
-     { name: "Dr. Tabassum", role: "TERI" },
-   ],
+   // Advisory Committee
    advisory: [
-     { name: "Dr. Tauseef Ahmed Jasan", role: "University of Nizwa, KSA" },
-     { name: "Dr. Mohd Farhan", role: "University of Nizwa" },
-     { name: "Dr. Tauseef Ahmed", role: "JMI, India" },
-     { name: "Prof. Arif Iqbal Reaisi", role: "India" },
-     { name: "Prof. Hashim Yasin", role: "AMU, India" },
-     { name: "Prof. Hasan Tashkandi", role: "Barezit" },
-     { name: "Prof. Sajid Aslam Ahmed", role: "JMI, India" },
-     { name: "Dr. Nasim Akhtar", role: "CRRi, India" },
+     { name: "Dr. Tarique Ahmed", role: "Jazan University, KSA" },
+     { name: "Dr. Mufeed Sarholi", role: "University of Aleepo" },
+     { name: "Prof. Kafeel Ahmed", role: "JMI, India" },
+     { name: "Prof. Ashraf", role: "IIT Roorki, India" },
+     { name: "Prof. Nadeem Khalil", role: "AMU, India" },
+     { name: "Prof. Helen Treichel", role: "Barazil" },
+     { name: "Prof. Siraj Uddin Ahmed", role: "JMI, India" },
+     { name: "Dr. Nasim Akhter", role: "CRRI, India" },
+   ],
+ 
+   // Technical Committee
+   technical: [
+     { name: "Dr. Qamar Rayes Khan", role: "MCA" },
+     { name: "Dr. Majid B. Malik", role: "MCA" },
+     { name: "Dr. Taslim Arif", role: "ITE" },
+     { name: "Dr. Saima Aslam", role: "Biotechnology" },
+     { name: "Dr. Ahmed Riyaz", role: "EE" },
+     { name: "Dr. Abdul Hannan", role: "BGSBU" },
+     { name: "Dr. Shoaib Ahmed", role: "Biotechnology" },
+     { name: "Dr. Gulfam Ahmed", role: "MCA" },
+     { name: "Dr. Naseem Ahmed", role: "MCA" },
+     { name: "Dr. Amir Mazhar", role: "JMI" },
+     { name: "Dr. Adil Masood", role: "TERI" },
+     { name: "Dr. Soonal", role: "MRIU" },
+   ],
+ 
+   // Organizing Committee
+   organizing: [
+     { name: "Dr. Pervez Alam", role: "BGSB University, J & K, India", isChair: true, position: "Organizing Secretary" },
+     { name: "Dr. Ahmed Riyaz", role: "BGSB University, J & K, India", position: "Organizing Secretary" },
+     { name: "Prof. Asif Husain", role: "JMI, New Delhi, India", position: "Organizing Secretary" },
+   ],
+ 
+   // Coordinators
+   coordinators: [
+     { name: "Mr. Vaseem Shahnax", role: "BGSBU, India" },
+     { name: "Mr. Zishan Aslam", role: "BGSBU, India" },
+     { name: "Mr. Shahid Ul Islam", role: "BGSBU, India" },
+     { name: "Dr. Nasir Rather", role: "BGSBU, India" },
+     { name: "Mr. Ameer Ullah Ganai", role: "BGSBU, India" },
+   ],
+ 
+   // Patrons
+   patrons: [
+     { name: "Prof. Javed Iqbal", role: "Vice Chancellor, BGSBU", position: "Chief Patron" },
+     { name: "Prof. M. J Warsi", role: "Dean Academics Affairs", position: "Co-Patron" },
+     { name: "Dr. A. A. Shah", role: "SoET, BGSBU", position: "Associate Dean" },
+     { name: "Dr. Vishal Puri", role: "", position: "Principal" },
+     { name: "Er. Vaseem, Ah. Shahnaz", role: "", position: "HoD" },
+     { name: "Dr. Tasaduq Hussain", role: "", position: "HoD" },
    ],
  }
  
@@ -139,6 +166,9 @@ const themes = [
    const featuredThemesGrid = document.querySelector("#tab-featured .themes-grid")
    const committeeGrid = document.querySelector(".committee-grid")
    const advisoryGrid = document.querySelector(".advisory-grid")
+   const technicalGrid = document.querySelector(".technical-grid")
+   const coordinatorsGrid = document.querySelector(".coordinators-grid")
+   const patronsGrid = document.querySelector(".patrons-grid")
    const tabBtns = document.querySelectorAll(".tab-btn")
    const tabContents = document.querySelectorAll(".tab-content")
    const submitPaperBtn = document.querySelector(".submit-paper-btn")
@@ -262,6 +292,7 @@ const themes = [
  
    // Populate committee members
    function populateCommitteeMembers() {
+     // Organizing Committee
      if (committeeGrid) {
        const committeeHTML = committeeMembers.organizing
          .map(
@@ -274,7 +305,7 @@ const themes = [
              <div>
                <h3>${member.name}</h3>
                <p>${member.role}</p>
-               ${member.isChair ? '<span class="badge">Committee Chair</span>' : ""}
+               <span class="badge">${member.position}</span>
              </div>
            </div>
          </div>
@@ -285,6 +316,7 @@ const themes = [
        committeeGrid.innerHTML = committeeHTML
      }
  
+     // Advisory Committee
      if (advisoryGrid) {
        const advisoryHTML = committeeMembers.advisory
          .map(
@@ -305,6 +337,76 @@ const themes = [
          .join("")
  
        advisoryGrid.innerHTML = advisoryHTML
+     }
+ 
+     // Technical Committee
+     if (technicalGrid) {
+       const technicalHTML = committeeMembers.technical
+         .map(
+           (member) => `
+         <div class="committee-card">
+           <div class="patron-info">
+             <div class="info-icon">
+               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+             </div>
+             <div>
+               <h3>${member.name}</h3>
+               <p>${member.role}</p>
+             </div>
+           </div>
+         </div>
+       `,
+         )
+         .join("")
+ 
+       technicalGrid.innerHTML = technicalHTML
+     }
+ 
+     // Coordinators
+     if (coordinatorsGrid) {
+       const coordinatorsHTML = committeeMembers.coordinators
+         .map(
+           (member) => `
+         <div class="committee-card">
+           <div class="patron-info">
+             <div class="info-icon">
+               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+             </div>
+             <div>
+               <h3>${member.name}</h3>
+               <p>${member.role}</p>
+             </div>
+           </div>
+         </div>
+       `,
+         )
+         .join("")
+ 
+       coordinatorsGrid.innerHTML = coordinatorsHTML
+     }
+ 
+     // Patrons
+     if (patronsGrid) {
+       const patronsHTML = committeeMembers.patrons
+         .map(
+           (member, index) => `
+         <div class="patron-card ${index === 0 ? "gradient-card" : ""}">
+           <div class="patron-info">
+             <div class="info-icon ${index === 0 ? "light" : ""}">
+               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+             </div>
+             <div>
+               <h3>${member.name}</h3>
+               <p>${member.role}</p>
+               <span class="badge">${member.position}</span>
+             </div>
+           </div>
+         </div>
+       `,
+         )
+         .join("")
+ 
+       patronsGrid.innerHTML = patronsHTML
      }
    }
  
@@ -467,6 +569,52 @@ const themes = [
  
    // Add back-to-top handler
    handleBackToTop()
+ 
+   // Add fade-in animation for department and conference sections
+   const departmentElements = document.querySelectorAll(".department-card, .stat-item, .conference-about-card")
+   departmentElements.forEach((element) => {
+     element.classList.add("fade-in")
+   })
+ 
+   // Add animation for stat counters
+   function animateStatCounters() {
+     const statValues = document.querySelectorAll(".stat-value")
+ 
+     statValues.forEach((statValue) => {
+       const targetValue = Number.parseInt(statValue.textContent)
+       let currentValue = 0
+       const duration = 2000 // 2 seconds
+       const increment = targetValue / (duration / 16) // 60fps
+ 
+       function updateCounter() {
+         currentValue += increment
+         if (currentValue < targetValue) {
+           statValue.textContent = Math.floor(currentValue)
+           requestAnimationFrame(updateCounter)
+         } else {
+           statValue.textContent = targetValue
+         }
+       }
+ 
+       // Start animation when element is in viewport
+       const observer = new IntersectionObserver(
+         (entries) => {
+           entries.forEach((entry) => {
+             if (entry.isIntersecting) {
+               updateCounter()
+               observer.unobserve(entry.target)
+             }
+           })
+         },
+         { threshold: 0.5 },
+       )
+ 
+       observer.observe(statValue)
+     })
+   }
+ 
+   // Initialize stat counter animation
+   animateStatCounters()
  })
  
  // Add back-to-top button functionality
