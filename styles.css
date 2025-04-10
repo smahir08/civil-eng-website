@@ -320,8 +320,8 @@
    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
    position: relative;
    overflow: hidden;
+   gap: 2rem;
    /* height: 100%; */
-
  }
  
  .card:hover {
@@ -891,9 +891,7 @@
    grid-template-columns: 1fr;
    gap: 2rem;
  }
- .card about-rajouri-card{
-   height: 20px;
- }
+ 
  .info-item {
    display: flex;
    align-items: flex-start;
@@ -925,13 +923,186 @@
    color: var(--foreground-tertiary);
  }
  
- /* .conference-details{
-   gap: 6rem;
- } */
  /* Fix for About Rajouri card */
  .about-rajouri-card {
    height: auto;
    min-height: 0;
+ }
+ 
+ /* Add these new styles after the About Section styles and before the Speakers Section styles */
+ 
+ /* Department Section */
+ .department-section {
+   padding: 4rem 0;
+   position: relative;
+ }
+ 
+ .department-card {
+   padding: 2rem;
+   position: relative;
+   overflow: hidden;
+ }
+ 
+ .department-content {
+   position: relative;
+   z-index: 1;
+ }
+ 
+ .department-content p {
+   margin-bottom: 1.5rem;
+   line-height: 1.8;
+ }
+ 
+ .department-stats {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 2rem;
+   margin: 2rem 0;
+   justify-content: center;
+ }
+ 
+ .stat-item {
+   text-align: center;
+   padding: 1.5rem;
+   background: rgba(255, 255, 255, 0.05);
+   backdrop-filter: blur(10px);
+   border-radius: var(--radius);
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   min-width: 150px;
+   transition: all 0.3s ease;
+ }
+ 
+ .stat-item:hover {
+   transform: translateY(-10px);
+   background: rgba(255, 255, 255, 0.1);
+   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .stat-value {
+   font-size: 2.5rem;
+   font-weight: 700;
+   margin-bottom: 0.5rem;
+   background: linear-gradient(to right, var(--primary), var(--purple));
+   -webkit-background-clip: text;
+   background-clip: text;
+   color: transparent;
+ }
+ 
+ .stat-label {
+   font-size: 0.875rem;
+   color: var(--foreground-tertiary);
+ }
+ 
+ /* Conference About Section */
+ .conference-about-section {
+   padding: 4rem 0;
+   position: relative;
+ }
+ 
+ .conference-about-grid {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 2rem;
+ }
+ 
+ .conference-about-card {
+   padding: 2rem;
+   position: relative;
+   overflow: hidden;
+   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+ }
+ 
+ .conference-about-card:hover {
+   transform: translateY(-10px);
+ }
+ 
+ .card-icon {
+   background: linear-gradient(to bottom right, var(--primary-light), var(--purple-light));
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-bottom: 1.5rem;
+   transition: all 0.5s ease;
+   position: relative;
+   z-index: 1;
+ }
+ 
+ .conference-about-card:hover .card-icon {
+   transform: scale(1.1) rotate(10deg);
+   background: linear-gradient(to bottom right, var(--primary), var(--purple-light));
+ }
+ 
+ .conference-about-content {
+   position: relative;
+   z-index: 1;
+ }
+ 
+ .conference-about-content p {
+   line-height: 1.8;
+ }
+ 
+ /* Media Queries for Responsive Design */
+ @media (min-width: 768px) {
+   .department-stats {
+     justify-content: space-around;
+   }
+ 
+   .conference-about-grid {
+     grid-template-columns: repeat(2, 1fr);
+   }
+ 
+   .conference-about-grid > *:last-child {
+     grid-column: span 2;
+   }
+ }
+ 
+ @media (min-width: 1024px) {
+   .conference-about-grid {
+     grid-template-columns: repeat(3, 1fr);
+   }
+ 
+   .conference-about-grid > *:last-child {
+     grid-column: auto;
+   }
+ }
+ 
+ @media (max-width: 767px) {
+   .stat-item {
+     flex: 1 1 100%;
+     min-width: 120px;
+   }
+ 
+   .department-stats {
+     gap: 1rem;
+   }
+ }
+ 
+ /* Add styles for technical committee and coordinators grids */
+ .technical-grid,
+ .coordinators-grid {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 1.5rem;
+ }
+ 
+ @media (min-width: 640px) {
+   .technical-grid,
+   .coordinators-grid {
+     grid-template-columns: repeat(2, 1fr);
+   }
+ }
+ 
+ @media (min-width: 1024px) {
+   .technical-grid {
+     grid-template-columns: repeat(3, 1fr);
+   }
+ 
+   .coordinators-grid {
+     grid-template-columns: repeat(3, 1fr);
+   }
  }
  
  /* Speakers Section */
